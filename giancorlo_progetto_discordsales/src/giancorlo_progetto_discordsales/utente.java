@@ -13,13 +13,56 @@ public class utente {
     private String nome;
     private String password;
     private String mail;
+    //da cambiare perche non so come va salvata l'immaguine
     private Object immagine;
+    private int indirizzo;
+    private indirizzo a;
+    
 
     public utente(String nome, String password, String mail, Object immagine) {
         this.nome = nome;
         this.password = password;
         this.mail = mail;
         this.immagine = immagine;
+        indirizzo=-2;
+        a=new indirizzo();
     }
+    //serve per cambiare il nome del utente
+    public void cambio_nome(String nome){
+     this.nome=nome;   
+    }
+    //serve per cambiare la password del utente 
+    public void cambio_password(String password){
+        this.password=password;
+    }
+    public void cambio_mail(String mail){
+        this.mail=mail;
+    }
+    //da rivedere perche non so come si fa 
+    public void cambio_immagine(Object immagine){
+        this.immagine=immagine;
+    }
+    //attivare questo metodo quando l'utente ha fatto l'identificazione sulla mail
+    public void conta(){
+        indirizzo=a.nuovo_utente();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public Object getImmagine() {
+        return immagine;
+    }
+
+    public int getIndirizzo() {
+        return indirizzo;
+    }
+    
+    
     
 }

@@ -8,6 +8,8 @@ package giancorlo_progetto_discordsales;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,11 +22,20 @@ public class login {
     private utente a;
     private boolean log ;
     private PrintWriter out;
+    private BufferedReader in;
 
     public login() {
         accedi=new Socket();
         log=false;
-        out=new PrintWriter(ClientSocket.getOutputStream(),true);
+        try {
+            out=new PrintWriter(accedi.getOutputStream(),true);
+            in=new BufferedReader(new InputStreamReader(accedi.getInputStream()));
+            String richiesta=in.readLine();
+            String[]a=richiesta.split(":");
+            
+        } catch (IOException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     public void accedi(Socket clientsocket){
           accedi=clientsocket;

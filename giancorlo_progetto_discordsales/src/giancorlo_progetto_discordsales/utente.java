@@ -62,6 +62,15 @@ public class utente {
     public int getIndirizzo() {
         return indirizzo;
     }
+
+    public String getPassword() {
+        return password;
+    }
+    
+    //serve per visualizzare le notifiche
+    public void visualizza_notifiche(){
+        
+    }
     
     
     

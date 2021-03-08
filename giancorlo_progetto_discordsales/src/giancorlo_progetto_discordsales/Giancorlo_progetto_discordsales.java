@@ -5,6 +5,14 @@
  */
 package giancorlo_progetto_discordsales;
 
+
+
+import java.io.IOException;
+import java.net.*;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author super
@@ -15,7 +23,32 @@ public class Giancorlo_progetto_discordsales {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ArrayList<login>log=new ArrayList();
+        login acesso;
+        try {
+            ServerSocket server=new ServerSocket(20);
+            System.out.println("server attivo");
+            acesso=new login();
+            log.add(acesso);
+            while(true){
+                boolean fatto=false;
+                 Socket client = server.accept();
+                for (int i = 0; i <log.size(); i++) {
+                    if(log.get(i).accesso_eseguito()!=true){
+                        log.get(i).accedi(client);
+                        fatto=true;
+                    }
+                    if(fatto==false){  
+                        login accesso2=new login();
+                      log.add(accesso2);
+                      log.get(log.size()).accedi(client);
+                    }
+                    
+                }
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Giancorlo_progetto_discordsales.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

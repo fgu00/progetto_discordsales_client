@@ -27,5 +27,31 @@ private ArrayList<utente>membri;
     public void stampa(){
         
     }
+    //serve per scrivere nella chat
+    public synchronized void scrivi(){
+        
+    }
+    public ArrayList<Object> getMessaggi(){
+    return null; 
+    }
+    public String getNome(){
+    return nome;
+        
+    }
+    public int getIndirizzo(){
+    return indirizzo;  
+    }
+    public void aggiungi_utente(){
+        
+    }
+    public void elimina_utente(){
+        
+    }
+    public void getUtente(){
+        
+    }
+    
+    
+    
     
 }

@@ -5,7 +5,8 @@
  */
 package giancorlo_progetto_discordsales;
 
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 import java.util.Scanner;
 
 /**
@@ -18,14 +19,17 @@ public class login {
     private Socket accedi;
     private utente a;
     private boolean log ;
+    private PrintWriter out;
 
     public login() {
         accedi=new Socket();
         log=false;
+        out=new PrintWriter(ClientSocket.getOutputStream(),true);
     }
     public void accedi(Socket clientsocket){
           accedi=clientsocket;
-          accedi.getInetAddress();
+         System.out.println( accedi.getInetAddress());
+          
     }
     public boolean accesso_eseguito(){
         return log;

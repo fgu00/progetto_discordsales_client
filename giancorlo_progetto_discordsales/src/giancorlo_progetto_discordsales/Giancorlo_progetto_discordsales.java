@@ -22,6 +22,7 @@ public class Giancorlo_progetto_discordsales {
     /**
      * @param args the command line arguments
      */
+   public static ArrayList<utente>persone=new ArrayList();
     public static void main(String[] args) {
         ArrayList<login>log=new ArrayList();
         login acesso;

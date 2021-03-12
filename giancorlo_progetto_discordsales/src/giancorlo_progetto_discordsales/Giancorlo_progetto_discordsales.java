@@ -36,7 +36,7 @@ public class Giancorlo_progetto_discordsales {
                  Socket client = server.accept();
                 for (int i = 0; i <log.size(); i++) {
                     if(log.get(i).accesso_eseguito()!=true){
-                        log.get(i).accedi(client);
+                        log.get(i).inizio(client);
                         fatto=true;
                     }
                     if(fatto==false){  

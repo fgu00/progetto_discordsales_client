@@ -5,10 +5,15 @@
  */
 package giancorlo_progetto_discordsales;
 
+import java.util.ArrayList;
+import java.util.Vector;
+
 /**
  *
  * @author super
  */
 public class canale {
     
-}
+    }
+    
+

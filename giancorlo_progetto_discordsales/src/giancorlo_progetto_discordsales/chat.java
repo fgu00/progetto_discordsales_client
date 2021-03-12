@@ -5,6 +5,8 @@
  */
 package giancorlo_progetto_discordsales;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -16,20 +18,31 @@ private String nome;
 private ArrayList<Object>messaggi;
 private int indirizzo;
 private ArrayList<utente>membri;
+private String messaggio;
 
-    public chat() {
+    public chat(String nome) {
+        this.nome=nome;
     }
 
     @Override
+    //controlla che ci siano nuovi mesaggi
     public void run() {
-       
+     while(true){
+         if(messaggio==messaggi.get(messaggi.size())){
+             stampa();
+         }
+     }
     }
+     //serve per stampare tutti i messaggi       
     public void stampa(){
-        
+        for (int i = 0; i < 10; i++) {
+            System.out.println(messaggi.get(i));
+        }
+  
     }
     //serve per scrivere nella chat
-    public synchronized void scrivi(){
-        
+    public synchronized void scrivi(String messaggio){
+        this.messaggio=messaggio;
     }
     public ArrayList<Object> getMessaggi(){
     return null; 
@@ -41,14 +54,16 @@ private ArrayList<utente>membri;
     public int getIndirizzo(){
     return indirizzo;  
     }
-    public void aggiungi_utente(){
-        
+    public void aggiungi_utente(utente a){
+      membri.add(a);
     }
-    public void elimina_utente(){
-        
+    public void elimina_utente(utente a){
+    membri.remove(a);
     }
     public void getUtente(){
-        
+        for (int i = 0; i < 10; i++) {
+            System.out.println(membri.get(i));
+        }
     }
     
     

@@ -74,7 +74,8 @@ public class login {
             int n=Integer.getInteger(m[0]);
             switch(n){
                 case -2:
-                    
+                  //nuovo canale
+                    //canale nuovo=new canale();
             }
         } catch (IOException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
@@ -87,6 +88,10 @@ public class login {
     }
     public utente getUtente(){
         return a;  
+    }
+    public void inizio(Socket a) throws IOException{
+        this.accedi(a);
+        this.interazioni();
     }
     
 }

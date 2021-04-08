@@ -71,12 +71,27 @@ public class login {
                     categorie nuova=new categorie(nome3);
                     break;
                 case 4:
-                    //per creare un caht da finire
+                    //per creare un chat da finire
                     String indirizzo4=m[1];
+                    //da mettere una volta fatto il canale dove verra inserita la chat
                     String nome5=m[2];
                     String nome_chat=m[3];
                     String tipologia=m[4];
-                    chat c=new chat(nome5);
+                    chat c=new chat(nome_chat);
+                    c.setTipologia(Integer.parseInt(tipologia));
+                    c.aggiungi_utente(indirizzo4);
+                    break;
+                case 8:
+                    String indirizzo8=m[1];
+                    //da mettere una volta fatto il canale dove verra inserita la chat
+                    String nome8=m[2];
+                    String nome_categotia=m[3];
+                    String nome_chat8=m[4];
+                    String tipologia8=m[5];
+                    chat c1=new chat(nome_chat8);
+                    c1.setTipologia(Integer.parseInt(tipologia8));
+                    c1.aggiungi_utente(indirizzo8);
+                    //mettere la chat dentro un canale attraverso il quale metterlo nella categoria
                     break;
                 case 5:
                     //per inviate una persona in un canale

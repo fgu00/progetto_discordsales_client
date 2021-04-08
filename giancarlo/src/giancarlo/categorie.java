@@ -5,6 +5,7 @@
  */
 package giancarlo;
 
+import java.net.Socket;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class categorie {
      private String nome;
     private ArrayList<chat>chat;
+    private Socket accedi;
     
     public categorie(String nome){
      this.nome=nome;
@@ -24,9 +26,10 @@ public class categorie {
      public void setNome(String nome){
          this.nome=nome;
     }
-     public void aggiungi_chat(String nome){
-         chat a=new chat(nome);
-         
+     public void aggiungi_chat(chat a){
+        chat.add(a);
      }
-       
+     public void accedi(Socket accedi){
+      this.accedi=accedi;       
+  }  
 }

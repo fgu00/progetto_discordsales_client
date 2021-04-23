@@ -41,7 +41,7 @@ private int tipologia;
     public void accedi_privata(Socket accedi) throws IOException{
         BufferedReader in=new BufferedReader(new InputStreamReader(accedi.getInputStream()));
         String indirizzoutente=in.readLine();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i <membri.size(); i++) {
         if(indirizzoutente.equals(membri.get(i)))
         this.accedi=accedi;   
         }
@@ -98,6 +98,9 @@ private int tipologia;
     public void getIndirizzo(){
     out.write(indirizzo);  
     }
+    public int indirizzo(){
+    return indirizzo;   
+    }
     public void aggiungi_utente(String a){
       membri.add(a);
     }
@@ -109,4 +112,8 @@ private int tipologia;
             System.out.println(membri.get(i));
         }
     }
+    public int getTipologia() {
+        return tipologia;
+    }
+    
 }

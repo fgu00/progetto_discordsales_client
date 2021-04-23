@@ -61,7 +61,7 @@ public class login {
                     //per creare un nuovo canale
                     String indirizzo=m[1];
                     String nome2=m[2];
-                    canale nuovo=new canale();
+                    canale nuovo=new canale(nome2);
                     break;
                 case 3:
                     //per creare una categoria

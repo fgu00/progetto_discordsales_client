@@ -30,5 +30,5 @@ public class indirizzo {
     public void leggi(){
         
     }
-}  
+}
 

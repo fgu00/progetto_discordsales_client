@@ -9,7 +9,7 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import java.net.SocketAddress;
 /**
  *
  * @author super
@@ -25,6 +25,7 @@ public class Giancarlo {
         login acesso;
         try {
             ServerSocket server=new ServerSocket(20);
+           // server.bind( 0, "0.0.0.0");
             System.out.println("server attivo");
             acesso=new login();
             log.add(acesso);

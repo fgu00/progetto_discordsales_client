@@ -24,7 +24,7 @@ private int indirizzo;
 private ArrayList<String>membri;
 private String messaggio;
 private Socket accedi;
- private PrintWriter out;
+private PrintWriter out;
 private BufferedReader in;
 private int tipologia;
 
